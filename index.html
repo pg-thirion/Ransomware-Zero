@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101720">
+<meta name="description" content="Ransomware Zero, a fictional incident response strategy game.">
+<title>Ransomware Zero | Incident Response</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23192330'/%3E%3Cpath d='M32 8 52 16v17c0 12-12 20-20 24-8-4-20-12-20-24V16z' fill='none' stroke='%235ce0b4' stroke-width='5'/%3E%3Cpath d='m22 32 7 7 14-15' fill='none' stroke='%235ce0b4' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.mjs"></script>
+</head>
+<body>
+<header class="top"><div class="brand"><span class="brandmark" aria-hidden="true">RZ</span><div><h1>RANSOMWARE <span>ZERO</span></h1><p>INCIDENT RESPONSE COMMAND</p></div></div><div class="top-actions"><span class="simulation">SIMULATION ONLY</span><button id="help">How to play</button><button id="new">New incident</button></div></header>
+<main>
+<section class="brief"><div><p class="eyebrow">ACTIVE INCIDENT / <span id="incident"></span></p><h2 id="scenario-title">Business under siege</h2><p id="brief"></p></div><div class="clock"><p class="eyebrow">RECOVERY DEADLINE</p><strong id="clock">00:00</strong><span id="turn"></span></div></section>
+<section class="metrics" aria-label="Incident metrics">
+<div class="metric"><span>Service availability</span><strong id="online">100%</strong><div class="meter"><i id="online-bar"></i></div></div>
+<div class="metric"><span>Active compromise</span><strong id="infected" class="red">0</strong><small id="encrypted"></small></div>
+<div class="metric"><span>Backup integrity</span><strong id="backup">100%</strong><small id="vault"></small></div>
+<div class="metric"><span>Response points</span><strong id="ap">4 / 4</strong><small>Refill each response cycle</small></div>
+<div class="metric"><span>Incident score</span><strong id="score">1000</strong><small>Limit business disruption</small></div>
+</section>
+<div class="workspace">
+<section class="panel network"><div class="panelhead"><div><p class="eyebrow">01 / INFRASTRUCTURE</p><h3>Network topology</h3></div><div class="control"><button id="pause">Start clock</button><button id="next" class="primary">Next cycle</button></div></div>
+<div class="legend"><span><i class="dot clean"></i>Healthy</span><span><i class="dot infected"></i>Infected</span><span><i class="dot encrypted"></i>Encrypted</span><span><i class="dot isolated"></i>Isolated</span><span><i class="dot hardened"></i>Hardened</span></div>
+<div id="map" class="map" aria-label="Select a network machine"><svg id="links" viewBox="0 0 900 420" preserveAspectRatio="none" aria-hidden="true"></svg><div id="nodes"></div></div>
+<div class="mapfooter"><span id="status">CLOCK PAUSED</span><span>Click a machine to respond</span></div></section>
+<aside class="panel inspector"><div class="panelhead"><div><p class="eyebrow">02 / RESPONSE</p><h3>Asset inspector</h3></div></div><div id="asset"></div><div id="actions"></div><p id="feedback" role="status"></p></aside>
+</div>
+<div class="lower"><section class="panel"><div class="panelhead"><div><p class="eyebrow">03 / TELEMETRY</p><h3>Incident timeline</h3></div><span id="event-count" class="tag"></span></div><div id="logs" class="logs" aria-label="Incident timeline"></div></section><section class="panel"><div class="panelhead"><div><p class="eyebrow">04 / OBJECTIVES</p><h3>Recovery checklist</h3></div></div><div id="objectives" class="objectives"></div><div class="hint"><b>Intelligence feed</b><div id="intel"></div></div></section></div>
+</main>
+<footer>RANSOMWARE ZERO <span>Fictional training environment. No real systems are accessed.</span></footer>
+<dialog id="setup"><form method="dialog"><p class="eyebrow">INCIDENT BRIEFING</p><h2>Select operation</h2><p>Choose a difficulty. The clock starts paused so you can inspect the network.</p><label for="difficulty">Scenario</label><select id="difficulty"><option value="rookie">First response / Rookie</option><option value="standard" selected>Business under siege / Standard</option><option value="expert">Critical infrastructure / Expert</option></select><p id="description"></p><div class="dialog-actions"><button value="cancel">Cancel</button><button value="start" class="primary">Deploy response team</button></div></form></dialog>
+<dialog id="manual"><form method="dialog"><p class="eyebrow">FIELD MANUAL</p><h2>Contain. Recover. Restore.</h2><ol><li>Isolate compromised machines to stop lateral spread.</li><li>Seal the backup vault before it becomes infected.</li><li>Restore an isolated machine using a verified sealed backup, or rebuild it without a backup.</li><li>Reconnect clean machines to restore availability. Harden healthy machines against future incidents.</li><li>Use your limited response points before advancing a cycle. Start the clock for real-time play, or advance manually.</li><li>Win by sealing the vault, restoring all services, surviving all intrusion waves and maintaining two clean cycles.</li></ol><p>Each cycle represents five seconds of the simulated deadline. Infected machines can encrypt after two cycles. A sealed vault stays offline intentionally.</p><div class="dialog-actions"><button class="primary">Close manual</button></div></form></dialog>
+<dialog id="result"><form method="dialog"><p class="eyebrow">AFTER-ACTION REPORT</p><h2 id="result-title"></h2><p id="result-text"></p><div id="result-metrics" class="result-metrics"></div><div class="dialog-actions"><button value="close">Review incident</button><button value="retry" class="primary">New incident</button></div></form></dialog>
+<noscript>JavaScript is required to play Ransomware Zero.</noscript>
+</body></html>
