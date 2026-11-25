@@ -14,12 +14,18 @@ Open http://localhost:8000. The game begins paused; use **Next cycle** to play t
 
 ## Gameplay
 
-- Three difficulty levels, ten assets and fifteen simulated network links.
+- Six missions, ten assets and fifteen simulated network links.
 - Isolate compromised machines, seal backups, harden clean machines, restore or rebuild systems and reconnect services.
 - Response points replenish each cycle. Active infections can spread and encrypt systems.
 - Service availability is weighted by business criticality. Downtime, lost backup integrity and response actions reduce the score.
 - Win after all intrusion waves have passed, the vault is sealed with 100% verified backup integrity, all services are online and the network has remained clean for two cycles.
 - If the vault is compromised, rebuild it and verify a fresh recovery snapshot once every service is online. Best successful scores are stored locally per difficulty. No personal information is collected.
+
+## Operations expansion
+
+Six missions and sequential campaign progression, shareable replay seeds, a daily challenge, incident autosave/resume, local career history and seven achievements. Investigate assets and preserve evidence, delay encryption with monitoring, rotate credentials against scheduled intrusions, segment individual network links, deploy an emergency reserve and deliver stakeholder briefings. Review business disruption estimates, recovery and blocked-wave counters, availability history, a searchable asset inventory and filtered logs. Adjust clock speed, toggle guidance, use N/P shortcuts and export a plain-text report.
+
+All mechanics are fictional. Estimated disruption is an illustrative R125 per weighted downtime point, not a real financial estimate. Local career progress and saves stay in the browser. Saves are validated by replaying the action journal, not trusting arbitrary serialized game state.
 
 ## Architecture
 
