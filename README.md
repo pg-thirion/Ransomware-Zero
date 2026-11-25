@@ -38,4 +38,6 @@ Tests cover initial state, invalid actions, containment, backup restoration, har
 
 ## Deploy
 
-Serve the repository root using any static host, including GitHub Pages (Settings > Pages > Deploy from a branch > main / root). No environment variables are necessary.
+The GitHub Actions workflow runs engine and browser regression tests on Chromium, Firefox and WebKit before publishing. Enable GitHub Pages in Settings > Pages > Build and deployment > Source > GitHub Actions, then run the Verify and publish workflow from the Actions tab if it did not start automatically. Only the four production assets are published. No environment variables or paid services are necessary.
+
+For local end-to-end tests, install Playwright with `python -m pip install playwright==1.56.0`, install browsers with `python -m playwright install`, start the local HTTP server and run `python browser_test.py`. Set `RZ_BROWSER` to `firefox` or `webkit` to test those engines.
