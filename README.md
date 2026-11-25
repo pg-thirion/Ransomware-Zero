@@ -2,6 +2,8 @@
 
 A browser-based incident response strategy game. Protect a fictional company from a simulated ransomware outbreak. No malware, external network requests, credentials or backend are involved.
 
+**Live demo:** [Play Ransomware Zero on Vercel](https://ransomware-zero.vercel.app/)
+
 ## Play locally
 
 Use Python 3 to serve the project:
