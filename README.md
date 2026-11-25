@@ -18,8 +18,8 @@ Open http://localhost:8000. The game begins paused; use **Next cycle** to play t
 - Isolate compromised machines, seal backups, harden clean machines, restore or rebuild systems and reconnect services.
 - Response points replenish each cycle. Active infections can spread and encrypt systems.
 - Service availability is weighted by business criticality. Downtime, lost backup integrity and response actions reduce the score.
-- Win after all intrusion waves have passed, the vault is sealed, all services are online and the network has remained clean for two cycles.
-- Best successful scores are stored locally per difficulty. No personal information is collected.
+- Win after all intrusion waves have passed, the vault is sealed with 100% verified backup integrity, all services are online and the network has remained clean for two cycles.
+- If the vault is compromised, rebuild it and verify a fresh recovery snapshot once every service is online. Best successful scores are stored locally per difficulty. No personal information is collected.
 
 ## Architecture
 
